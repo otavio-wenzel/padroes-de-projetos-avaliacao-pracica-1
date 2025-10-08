@@ -1,6 +1,6 @@
-package Questao01;
+package Pasta1;
 
-public class PagamentoPayPal implements Pagamento {
+public class PagamentoPayPal implements Modal {
 
     private String email;
 

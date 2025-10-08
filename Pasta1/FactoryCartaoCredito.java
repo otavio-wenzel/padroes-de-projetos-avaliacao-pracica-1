@@ -1,4 +1,4 @@
-package Questao01;
+package Pasta1;
 
 public class FactoryCartaoCredito extends PagamentoFactory {
 
@@ -9,7 +9,7 @@ public class FactoryCartaoCredito extends PagamentoFactory {
     }
 
     @Override
-    public Pagamento criarPagamento() {
+    public Modal criarPagamento() {
         return new PagamentoCartaoCredito(numeroCartao);
     }
     

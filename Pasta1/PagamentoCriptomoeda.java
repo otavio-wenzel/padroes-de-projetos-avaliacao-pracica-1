@@ -1,6 +1,6 @@
-package Questao01;
+package Pasta1;
 
-public class PagamentoCriptomoeda implements Pagamento {
+public class PagamentoCriptomoeda implements Modal {
 
     private double saldoCarteira;
 

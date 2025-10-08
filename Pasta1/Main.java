@@ -1,4 +1,4 @@
-package Questao01;
+package Pasta1;
 
 public class Main {
 

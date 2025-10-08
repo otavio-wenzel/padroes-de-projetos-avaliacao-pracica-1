@@ -1,6 +1,6 @@
-package Questao01;
+package Pasta1;
 
-public class PagamentoCartaoCredito implements Pagamento {
+public class PagamentoCartaoCredito implements Modal {
 
     private String numeroCartao;
 
