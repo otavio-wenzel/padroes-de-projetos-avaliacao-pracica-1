@@ -1,6 +1,6 @@
 package Questao01Modal;
 
-public class FactoryAereo extends ModalFactory{
+public class FactoryAereo extends ModalFactory {
 
     private double precoPorKg;
 
@@ -12,5 +12,4 @@ public class FactoryAereo extends ModalFactory{
     public Modal criarModal() {
         return new ModalAereo(precoPorKg);
     }
-    
 }

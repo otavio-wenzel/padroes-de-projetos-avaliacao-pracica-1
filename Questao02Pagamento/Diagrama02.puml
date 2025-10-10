@@ -1,0 +1,50 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+' --- Produto ---
+interface Pagamento {
+  + processarPagamento(valor: double): String
+}
+
+' --- Produtos Concretos ---
+class PagamentoCartaoCredito {
+  + processarPagamento(valor: double): String
+}
+class PagamentoBoleto {
+  + processarPagamento(valor: double): String
+}
+class PagamentoPix {
+  + processarPagamento(valor: double): String
+}
+
+PagamentoCartaoCredito ..|> Pagamento
+PagamentoBoleto ..|> Pagamento
+PagamentoPix ..|> Pagamento
+
+' --- Fábrica ---
+abstract class PagamentoFactory {
+  {abstract} + criarPagamento(): Pagamento
+}
+
+class FactoryCartaoCredito
+class FactoryBoleto
+class FactoryPix
+
+FactoryCartaoCredito --|> PagamentoFactory
+FactoryBoleto --|> PagamentoFactory
+FactoryPix --|> PagamentoFactory
+
+PagamentoFactory --> Pagamento : cria
+
+' --- Service ---
+class PagamentoService {
+  + processarPagamento(factory: PagamentoFactory, valor: double): void
+}
+PagamentoService --> PagamentoFactory : usa
+PagamentoService ..> Pagamento : depende/usa
+
+' (Opcional) Main
+' class Main
+' Main ..> PagamentoService : usa
+
+@enduml

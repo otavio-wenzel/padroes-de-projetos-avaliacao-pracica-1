@@ -1,8 +1,8 @@
 package Questao01Modal;
 
-public class ModalTerrestre implements Modal{
+public class ModalTerrestre implements Modal {
 
-    private double precoPorKm = 1.20;
+    private double precoPorKm; // ex.: 1.20
 
     public ModalTerrestre(double precoPorKm) {
         this.precoPorKm = precoPorKm;
@@ -10,8 +10,7 @@ public class ModalTerrestre implements Modal{
 
     @Override
     public double calcularTarifa(double valorBase) {
-        if (valorBase < 0) throw new IllegalArgumentException("Volume inválido.");
+        if (valorBase < 0) throw new IllegalArgumentException("Distância inválida.");
         return precoPorKm * valorBase;
     }
-    
 }

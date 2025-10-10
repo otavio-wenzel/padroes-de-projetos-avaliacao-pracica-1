@@ -1,6 +1,6 @@
 package Questao01Modal;
 
-public class FactoryTerrestre extends ModalFactory{
+public class FactoryTerrestre extends ModalFactory {
 
     private double precoPorKm;
 
@@ -9,8 +9,7 @@ public class FactoryTerrestre extends ModalFactory{
     }
 
     @Override
-    public Modal criarModal(){
+    public Modal criarModal() {
         return new ModalTerrestre(precoPorKm);
     }
-    
 }

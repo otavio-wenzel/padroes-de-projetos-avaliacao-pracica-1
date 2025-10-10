@@ -1,0 +1,42 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+' --- Subject ---
+class Topico {
+  - observers: List<AbsObserver>
+  - ultimaNoticia: String
+  + Topico(nome: String)
+  + publicarNoticia(titulo: String): void
+  + attach(o: AbsObserver): void
+  + dettach(o: AbsObserver): void
+  - notificarObservadores(): void
+  + getNome(): String
+  + getUltimaNoticia(): String
+}
+
+' --- Observer abstrato ---
+abstract class AbsObserver {
+  # observado: Topico
+  + update(): void
+}
+
+' --- Observer concreto ---
+class LeitorConcreto {
+  - nomeLeitor: String
+  + LeitorConcreto(observado: Topico, nomeLeitor: String)
+  + update(): void
+}
+
+' --- (Opcional) Main ---
+' class consumidorObserver {
+'   + main(args: String[]): void
+' }
+
+' Relações
+LeitorConcreto --|> AbsObserver
+Topico "1" o-- "0..*" AbsObserver : mantém
+LeitorConcreto ..> Topico : attach/usa
+' consumidorObserver ..> Topico
+' consumidorObserver ..> LeitorConcreto
+
+@enduml

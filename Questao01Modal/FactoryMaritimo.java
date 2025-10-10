@@ -12,5 +12,4 @@ public class FactoryMaritimo extends ModalFactory {
     public Modal criarModal() {
         return new ModalMaritimo(precoPorM3);
     }
-    
 }

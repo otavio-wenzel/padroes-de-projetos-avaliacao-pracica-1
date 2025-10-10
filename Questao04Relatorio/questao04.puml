@@ -1,0 +1,47 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+' --- Interface ---
+interface iRelatorio {
+  + Descricao(): String
+  + Custo(): double
+}
+
+' --- Classes ---
+class RelatorioBasico {
+  + Descricao(): String
+  + Custo(): double
+}
+
+abstract class RelatorioDecorator {
+  - relatorio: iRelatorio
+  + Descricao(): String
+  + Custo(): double
+}
+
+class EstatisticasDecorator {
+  + Descricao(): String
+  + Custo(): double
+}
+
+class GraficoDecorator {
+  + Descricao(): String
+  + Custo(): double
+}
+
+class PdfDecorator {
+  + Descricao(): String
+  + Custo(): double
+}
+
+' --- Relações ---
+RelatorioBasico ..|> iRelatorio
+RelatorioDecorator ..|> iRelatorio
+
+EstatisticasDecorator --|> RelatorioDecorator
+GraficoDecorator --|> RelatorioDecorator
+PdfDecorator --|> RelatorioDecorator
+
+RelatorioDecorator --> iRelatorio : usa / contém
+
+@enduml
