@@ -1,4 +1,4 @@
-package decorator;
+package Questao04;
 
 // Componente concreto — relatório simples
 public class RelatorioBasico implements iRelatorio {

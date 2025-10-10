@@ -1,4 +1,4 @@
-package decorator;
+package Questao04;
 
 // Componente abstrato (interface)
 public interface iRelatorio {

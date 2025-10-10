@@ -1,4 +1,4 @@
-package decorator;
+package Questao04;
 
 // Decorador concreto — adiciona estatísticas ao relatório
 public class EstatisticasDecorator extends RelatorioDecorator {

@@ -1,4 +1,4 @@
-package observer;
+package Questao03;
 
 /**
  * Observer concreto — representa um leitor/assinante do site.

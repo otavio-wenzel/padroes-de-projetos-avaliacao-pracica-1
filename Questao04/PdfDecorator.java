@@ -1,4 +1,4 @@
-package decorator;
+package Questao04;
 
 // Decorador concreto — adiciona exportação em PDF ao relatório
 public class PdfDecorator extends RelatorioDecorator {

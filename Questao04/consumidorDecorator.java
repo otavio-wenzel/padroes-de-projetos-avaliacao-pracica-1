@@ -1,4 +1,4 @@
-package decorator;
+package Questao04;
 
 // Consumidor do Decorator — no mesmo formato do professor
 public class consumidorDecorator {

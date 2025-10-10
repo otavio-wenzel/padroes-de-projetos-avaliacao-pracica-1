@@ -1,4 +1,4 @@
-package observer;
+package Questao03;
 
 /**
  * Classe de teste (consumidor) no exato estilo dos slides do professor.

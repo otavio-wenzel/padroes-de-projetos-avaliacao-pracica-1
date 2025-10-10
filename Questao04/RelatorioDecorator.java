@@ -1,4 +1,4 @@
-package decorator;
+package Questao04;
 
 // Decorador abstrato — segue o padrão condimentDecorator
 public abstract class RelatorioDecorator implements iRelatorio {

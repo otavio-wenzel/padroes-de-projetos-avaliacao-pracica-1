@@ -1,4 +1,4 @@
-package observer;
+package Questao03;
 
 /**
  * Observer abstrato — segue o padrão do professor.

@@ -1,4 +1,4 @@
-package decorator;
+package Questao04;
 
 // Decorador concreto — adiciona gráficos ao relatório
 public class GraficoDecorator extends RelatorioDecorator {
