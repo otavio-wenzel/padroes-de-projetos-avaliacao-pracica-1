@@ -28,7 +28,7 @@ Diagrama: https://drive.google.com/file/d/1Ig4Lm4xFtDIuox4DluQpvWekMbz8Sh0U/view
 Questao 04: Relatorio
 Nesta questao lembrei do exemplo do café, que utiliza o padrao Decorator, e foi este que escolhi para aplicar nesta questao, escolhi porque o relatório basico deve receber funcionalidades opcionais de forma progressiva e combinavel, uma logica de camadas, sem alterar o codigo existente. Com uma interface comum e um componente concreto, cada recurso vira um decorador que envolve o relatorio e acrescenta comportamento. Assim, o cliente compoe livremente cada camada, mantendo baixo acoplamento, polimorfismo e o Open/Closed.
 
-Diagrama: 
+Diagrama: https://drive.google.com/file/d/1J8Rjl7pnNtcIsLypSQzY_m_eglhjPPhJ/view?usp=drivesdk
 
 
 Consideracoes finais:
