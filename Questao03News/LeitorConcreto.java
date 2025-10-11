@@ -2,7 +2,7 @@ package Questao03News;
 
 public class LeitorConcreto extends AbsObserver {
 
-    private final String nomeLeitor;
+    private  String nomeLeitor;
 
     public LeitorConcreto(Topico observado, String nomeLeitor) {
         this.observado = observado;

@@ -1,0 +1,49 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+' --- Produto ---
+interface Modal {
+  + calcularTarifa(valorBase: double): double
+}
+
+' --- Produtos Concretos ---
+class ModalTerrestre {
+  + calcularTarifa(valorBase: double): double
+}
+class ModalAereo {
+  + calcularTarifa(valorBase: double): double
+}
+class ModalMaritimo {
+  + calcularTarifa(valorBase: double): double
+}
+
+ModalTerrestre ..|> Modal
+ModalAereo ..|> Modal
+ModalMaritimo ..|> Modal
+
+' --- Fábrica (Creator) ---
+abstract class ModalFactory {
+  + criarModal(): Modal
+}
+
+class FactoryTerrestre
+class FactoryAereo
+class FactoryMaritimo
+
+FactoryTerrestre --|> ModalFactory
+FactoryAereo --|> ModalFactory
+FactoryMaritimo --|> ModalFactory
+
+' --- Service (consumidor) ---
+class TarifaService {
+  + calcularTarifa(factory: ModalFactory, valorBase: double): double
+}
+
+TarifaService --> ModalFactory : usa
+TarifaService ..> Modal : usa
+
+' (Opcional) Main
+' class Main
+' Main ..> TarifaService : usa
+
+@enduml

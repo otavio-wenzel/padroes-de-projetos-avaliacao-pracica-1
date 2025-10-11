@@ -2,7 +2,7 @@ package Questao01Modal;
 
 public class ModalMaritimo implements Modal {
 
-    private double precoPorM3; // ex.: 2.10
+    private double precoPorM3;
 
     public ModalMaritimo(double precoPorM3) {
         this.precoPorM3 = precoPorM3;

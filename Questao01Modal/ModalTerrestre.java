@@ -2,7 +2,7 @@ package Questao01Modal;
 
 public class ModalTerrestre implements Modal {
 
-    private double precoPorKm; // ex.: 1.20
+    private double precoPorKm;
 
     public ModalTerrestre(double precoPorKm) {
         this.precoPorKm = precoPorKm;

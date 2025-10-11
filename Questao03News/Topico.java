@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Topico {
 
-    private final String nome;
+    private  String nome;
     private String ultimaNoticia;
 
-    private final List<AbsObserver> observers = new ArrayList<>();
+    private  List<AbsObserver> observers = new ArrayList<>();
 
     public Topico(String nome) {
         this.nome = nome;
